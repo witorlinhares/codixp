@@ -1,12 +1,11 @@
 particlesJS('particles-js',
-  
   {
     "particles": {
       "number": {
         "value": 80,
         "density": {
           "enable": true,
-          "value_area": 1900,
+          "value_area": 1900
         }
       },
       "color": {
@@ -116,5 +115,4 @@ particlesJS('particles-js',
       "background_size": "cover"
     }
   }
-
 );
