@@ -125,7 +125,7 @@ a.link button {
 
 a.link button:hover {
     transition: ease-in 0.1ms;
-    background-color: #8df79b;
+    background-color: #e1a6ff;
     color: #111111;
 }
 
