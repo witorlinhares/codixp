@@ -3,12 +3,16 @@
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 ::-webkit-scrollbar {
     width: 4px
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #23342e;
+    background-color: #111111;
 }
 
 ::-webkit-scrollbar-track {
@@ -23,41 +27,37 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    font-size: 15px;
+    color: #111111;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: #111111;
+    font-weight: 300;
+}
+
 .container {
-    max-width: 400px;
-    margin: auto;
     display: flex;
-    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
-.info,
-.link-img {
-    display: flex;
-    padding: 7% 0% 1%;
-    flex-direction: column;
-    max-width: 100%;
-}
-
-a {
-    text-decoration: none;
-}
+/* .info {
+    justify-content: center;
+} */
 
 .div-logo {
-    justify-content: center;
+    justify-content: left;
     display: flex;
-    padding-bottom: 2%;
+    margin-left: 48px;
 }
 
 img {
-    max-width: 10%;
+    max-width: 25%;
     margin: 0;
-}
-
-.title {
-    font-size: 20px;
-    text-align: center;
-    color: #23342e;
-    font-weight: 500;
 }
 
 .icons {
@@ -65,35 +65,41 @@ img {
     align-items: center;
 }
 
-.whatsapp,
-.behance,
-.hospedagem {
-    margin-right: 10px;
-    background-color: #1a1c19;
-    padding: 5px;
-    border-radius: 5px;
+.title {
+    font-size: 25px;
+    text-align: left;
+    color: #111111;
+    font-weight: 500;
+    margin-left: 48px;
+    letter-spacing: -1px;
 }
 
-h2 {
-    font-size: 15px;
-    color: #23342e;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-h3 {
-    color: #23342e;
-    font-weight: 400;
-}
-
-.div-high {
+.div-left-links {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
     flex-direction: column;
-    padding: 30px 20px;
-    margin-top: 10px;
-    border: solid 1px rgb(35, 52, 46, 0.2);
+}
+
+.div-left {
+    display: flex;
+    width: 30vw;
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 10px;
+    border: solid 1px rgba(121, 121, 121, 0.2);
     border-radius: 10px;
 
+}
+
+.whatsapp,
+.behance {
+    margin-right: 10px;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 section.btn-links {
@@ -103,30 +109,37 @@ section.btn-links {
 
 a.link button {
     width: 100%;
-    padding: 15px 40px 15px 40px;
+    padding: 12px 30px 12px 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-    color: #fff;
+    color: #ffffff;
     font-weight: 400;
     transition: 0.5s;
-    background: #23b86d;
+    background: #111111;
 }
 
 a.link button:hover {
     transition: ease-in 0.1ms;
-    background-color: #22ac67;
+    background-color: #8df79b;
+    color: #111111;
+}
+
+.div-right-img,
+.img-right {
+    display: flex;
+    max-width: 100vw;
 }
 
 footer {
     justify-content: center;
     display: flex;
-    background-color: #1a1c19;
-    margin-top: 8%;
-    padding-top: 1px;
+    background-color: #111111;
+    padding-top: 10px;
     padding-bottom: 12px;
 }
 
@@ -137,32 +150,56 @@ footer {
 
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 768px) {
 
     .container {
         justify-content: center;
         display: flex;
-        max-width: 350px;
+        max-width: 100vw;
         padding-bottom: 10%;
     }
 
-    .info,
-    .title {
-        display: flex;
-        max-width: 98%;
-        align-items: center;
+    .div-right-img,
+    .img-right {
+        display: none;
     }
 
-    .img {
-        max-width: 40%;
-        padding-top: 12%;
+    .info {
+        display: flex;
+        flex-direction: column;
     }
+
+    .div-left {
+        width: 85vw;
+    }
+
+    .div-left-links {
+        width: 100vw;
+        display: flex;
+    }
+
+    .div-logo{
+        margin-left: 10px;
+    }
+
+    .img{
+        max-width: 30%;
+    }
+
+    .title {
+        margin-left: 10px;
+        padding: 15px 0px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
 
     section.btn-links {
         padding-top: 3%;
     }
 
     .footer {
-        padding: 1%;
+        padding: 5px;
     }
 }
